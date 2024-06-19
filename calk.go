@@ -101,7 +101,9 @@ func base(s string) {
 			numbers[1] > 0 && numbers[1] < 11
 		if val, ok := operators[operator]; ok && errCheck == true {
 			a, b = &numbers[0], &numbers[1]
+			fmt.Println("Output:")
 			fmt.Println(val())
+			fmt.Println("Input:")
 		} else {
 			panic(RANGE)
 		}
@@ -138,10 +140,12 @@ func intToRoman(romanResult int) {
 			}
 		}
 	}
+	fmt.Println("Output:")
 	fmt.Println(romanNum)
+	fmt.Println("Input:")
 }
 func Start() {
-	fmt.Println("Welcome to kata-calculator")
+	fmt.Println("Input:")
 	reader := bufio.NewReader(os.Stdin)
 	for {
 		console, _ := reader.ReadString('\n')
